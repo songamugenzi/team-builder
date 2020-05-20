@@ -3,7 +3,7 @@ import React from 'react'
 export default function TeamForm(props) {
     const {
         values,
-        onInputChange,
+        onInputChangeHandler,
         onSubmit,
     } = props
 
@@ -24,7 +24,7 @@ export default function TeamForm(props) {
                         maxLength='40'
                         name='name'
                         value={values.name}
-                        onChange={onInputChange}
+                        onChange={onInputChangeHandler}
                     />
                 </label>
 
@@ -35,7 +35,7 @@ export default function TeamForm(props) {
                         maxLength='40'
                         name='email'
                         value={values.email}
-                        onChange={onInputChange}
+                        onChange={onInputChangeHandler}
                     />
                 </label>
 
@@ -43,7 +43,7 @@ export default function TeamForm(props) {
                     <select
                         name='role'
                         value={values.role}
-                        onChange={onInputChange}>
+                        onChange={onInputChangeHandler}>
 
                         <option value=' '>-- Select your role --</option>
                         <option value='Backend Engineer'>Backend Engineer</option>
